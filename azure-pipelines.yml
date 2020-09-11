@@ -12,7 +12,12 @@ jobs:
             npm ci
 
       - task: CmdLine@2
+        displayName: Build
+        inputs:
+          script: |
+            ng build
+      - task: CmdLine@2
         displayName: Test
         inputs:
           script: |
-            npm run test
+            ng test --watch=false
