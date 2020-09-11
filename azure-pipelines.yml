@@ -15,9 +15,10 @@ jobs:
         displayName: Build
         inputs:
           script: |
-            ng build
+            npm run build
+
       - task: CmdLine@2
         displayName: Test
         inputs:
           script: |
-            ng test --watch=false
+            npm run test --watch=false
