@@ -21,4 +21,4 @@ jobs:
         displayName: Test
         inputs:
           script: |
-            npm run test --watch=false
+            ng test --watch=false
