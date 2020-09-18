@@ -23,3 +23,17 @@ jobs:
         inputs:
           script: |
             npm run ng --  test --watch=false
+
+      - task: SonarQubePrepare@4
+        displayName: Setup sonar
+        inputs:
+          SonarQube: " sonarqube-dev-guild"
+          scannerMode: "CLI"
+          configMode: "file"
+      - task: SonarQubeAnalyze@4
+        displayName: Run analyze
+
+      - task: SonarQubePublish@4
+        displayName: Run publish
+        inputs:
+          pollingTimeoutSec: "300"
