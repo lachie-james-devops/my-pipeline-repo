@@ -1,7 +1,7 @@
 name: $(Rev:r:)
 
 jobs:
-  - job: Testsdf
+  - job: Test
     pool:
       vmImage: "macOS-latest"
     steps:
